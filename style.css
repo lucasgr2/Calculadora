@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Usado para evitar q uma caixa estore o pai ao usar um padding ou margin*/
+    font-family: Helvetica;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+#calculadora {
+    width: 400px;
+    padding: .5em;
+    background-color: #c4c4c4;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#calculadora h2 {
+    font-size: .9em;
+    font-weight: 200;
+    color: #666;
+}
+
+#operations {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#previu {
+    color: #777;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+    /* Serve para que ocorra a quebra de linhas*/
+    min-height: 1.6em;
+}
+
+#current {
+    min-height: 1.6em;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+    font-size: 2.3em;
+    font-weight: 600;
+}
+
+#butoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+#butoes button {
+    border: 1px solid transparent;
+    background-color: #dbdbdb;
+    height: 3.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#butoes .number {
+    background-color: #f3f3f3;
+}
+
+#butoes button:hover {
+    border-color: #999;
+    background-color: #bababa;
+}
+
+#butoes #equal {
+    background-color: #75a5cb;
+    grid-column: span 2;
+}
+
+#butoes #equal:hover {
+    background-color: #3a91d8;
+    border: 1px solid #999;
+}
